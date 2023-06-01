@@ -1,0 +1,76 @@
+server:
+  port: 32010
+spring:
+  application:
+    name: gatewayApplication
+  # 配置网关
+  cloud:
+    gateway:
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        cors-configurations:
+          '[/**]': #拦截的请求
+            allowedOrigins: "*" #允许跨域的请求
+            allowedMethods: #运行跨域的请求方式
+              - "GET"
+              - "POST"
+              - "DELETE"
+              - "PUT"
+              - "OPTIONS"
+              - "PATCH"
+            allowedHeaders: "*" #允许请求中携带的头信息
+            allowedCredentials: true #是否允许携带cookie
+            maxAge: 36000 #跨域检测的有效期,单位s
+      routes: # 配置路由
+        - id: user-router_1
+          uri: lb://userApplication
+          predicates:
+            - Path=/front/user/** # 配置路由断言
+        - id: dynamic-router_1 # 路由id，命名唯一
+          uri: lb://dynamicApplication
+          predicates:
+            - Path=/front/dynamic/**
+        - id: comment-router_1 # 路由id，命名唯一
+          uri: lb://commentApplication
+          predicates:
+            - Path=/front/comment/**
+        - id: chat-router_1 # 路由id，命名唯一
+          uri: lb://chatApplication
+          predicates:
+            - Path=/front/chat/**
+        - id: chat-ws_1 # 路由id，命名唯一：WebSocket
+          uri: lb:ws://chatApplication
+          predicates:
+            - Path=/ws/**
+#----------------------Swagger-----------------------------------------------------
+        - id: user-swagger
+          uri: lb://userApplication
+          predicates:
+            - Path=/swagger/user/**
+          filters:
+            - StripPrefix=2
+        - id: dynamic-swagger
+          uri: lb://dynamicApplication
+          predicates:
+            - Path=/swagger/dynamic/**
+          filters:
+            - StripPrefix=2
+        - id: comment-swagger
+          uri: lb://commentApplication
+          predicates:
+            - Path=/swagger/comment/**
+          filters:
+            - StripPrefix=2
+        - id: chat-swagger
+          uri: lb://chatApplication
+          predicates:
+            - Path=/swagger/chat/**
+          filters:
+            - StripPrefix=2
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:32000/eureka/

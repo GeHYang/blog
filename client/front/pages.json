@@ -1,0 +1,129 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页"
+			}
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"navigationBarTitleText": "消息"
+			}
+		},
+		{
+			"path": "pages/dynamic/dynamic",
+			"style": {
+				"navigationBarTitleText": "动态",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 1 ,// 触底上拉事件
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/account/account",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/userEdit/userEdit",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/publishDynamic/publishDynamic",
+			"style": {
+				"navigationBarTitleText": "写说说",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/dynamicDetail/dynamicDetail",
+			"style": {
+				"navigationBarTitleText": "动态详情",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 1, // 触底上拉事件
+				"app-plus": {
+					"softinputMode": "adjustResize" // 键盘弹起时修改页面高度
+				}
+			}
+
+		},
+		{
+			"path": "pages/chat/chat",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"softinputMode": "adjustResize" // 键盘弹起时修改页面高度
+				}
+			}
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/editInfo/editInfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/notify/notify",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/userDetail/userDetail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "black",
+		"app-plus": {
+			"titleNView": false,
+			"bounce": "none"
+		}
+	},
+	"tabBar": {
+		"height": "1px",
+		"list": [{
+				"pagePath": "pages/index/index"
+			},
+			{
+				"pagePath": "pages/message/message"
+			},
+			{
+				"pagePath": "pages/dynamic/dynamic"
+			},
+			{
+				"pagePath": "pages/account/account"
+			}
+		]
+	}
+}

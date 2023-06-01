@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/dynamic/dynamic",
+    "pages/account/account",
+    "pages/userEdit/userEdit",
+    "pages/publishDynamic/publishDynamic",
+    "pages/dynamicDetail/dynamicDetail",
+    "pages/chat/chat",
+    "pages/login/login"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index"
+      },
+      {
+        "pagePath": "pages/message/message"
+      },
+      {
+        "pagePath": "pages/dynamic/dynamic"
+      },
+      {
+        "pagePath": "pages/account/account"
+      }
+    ]
+  },
+  "usingComponents": {
+    "my-footer": "/component/MyFooter/index"
+  }
+}

@@ -1,0 +1,42 @@
+server:
+  port: 32006
+spring:
+  application:
+    name: chatApplication
+  datasource:
+    url: jdbc:mysql://localhost:3306/yang_blog?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: ghr
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+  # 配置RabbitMQ
+  rabbitmq:
+    host: 192.168.121.128  # 自己的虚拟机ip地址
+    port: 5672 # 端口
+    username: admin
+    password: admin
+    virtual-host: /
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:32000/eureka/
+#    register-with-eureka: false # 不将自己注册到注册中心
+#    fetch-registry: false # 不从注册中心获取数据
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+base:
+  staticPath: http://192.168.0.4:32002/static

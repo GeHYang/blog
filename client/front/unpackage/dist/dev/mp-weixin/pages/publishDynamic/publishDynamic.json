@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "写说说",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u--textarea": "/node-modules/uview-ui/components/u--textarea/u--textarea",
+    "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload",
+    "default-header": "/component/MyHeader/DefaultHeader"
+  }
+}

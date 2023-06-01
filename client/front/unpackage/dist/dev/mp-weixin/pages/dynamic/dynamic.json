@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "动态",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "my-header": "/component/MyHeader/index",
+    "dynamic-list": "/component/DynamicList/index"
+  }
+}

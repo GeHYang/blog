@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "my-header": "/component/MyHeader/index",
+    "message-list": "/component/MessageList/index"
+  }
+}

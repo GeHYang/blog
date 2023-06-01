@@ -1,0 +1,1 @@
+<view class="data-v-4d6eabd8"><u-navbar vue-id="6067502e-1" border="{{true}}" leftText="返回" placeholder="{{true}}" title="{{navTitle}}" autoBack="{{true}}" class="data-v-4d6eabd8" bind:__l="__l" vue-slots="{{['right']}}"><view slot="right" class="data-v-4d6eabd8"><slot></slot></view></u-navbar></view>

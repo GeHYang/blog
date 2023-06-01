@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "动态详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "default-header": "/component/MyHeader/DefaultHeader",
+    "dynamic-item": "/component/DynamicList/DynamicItem",
+    "comment": "/component/Comment/index"
+  }
+}

@@ -1,0 +1,1 @@
+<view class="message-list data-v-352237b8"><message-item bindtap="__e" vue-id="6f25404e-1" data-event-opts="{{[['tap',[['toDetail',['$event']]]]]}}" class="data-v-352237b8" bind:__l="__l"></message-item><text class="tips data-v-352237b8">没有更多消息了</text></view>

@@ -1,0 +1,1 @@
+<view class="dynamic-list data-v-45985420"><block wx:for="{{5}}" wx:for-item="i" wx:for-index="__i0__" wx:key="*this"><dynamic-item vue-id="{{'6d712dd4-1-'+__i0__}}" class="data-v-45985420" bind:__l="__l"></dynamic-item></block></view>

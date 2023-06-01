@@ -1,0 +1,46 @@
+server:
+  port: 32004
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/yang_blog?characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: ghr
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+  jackson:
+    date-format: yyyy-MM-dd hh:mm:ss
+  application:
+    name: emailApplication
+
+  mail:
+    host: smtp.163.com # 配置邮件服务器的地址
+    username: yang0_mail@163.com # 配置用户的账号
+    password: LRLJIRCFXEDEHHJB # 配置用户的密码,即授权码
+    default-encoding: UTF-8 # 配置默认编码
+    protocol: smtp
+    port: 25 # 配置邮件服务器的端口
+    properties:
+      mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory # SSL 连接配置
+      mail.debug: true # 开启 debug，这样方便开发者查看邮件发送日志
+  rabbitmq:
+    host: 192.168.121.128  # 自己的虚拟机ip地址
+    port: 5672 # 端口
+    username: admin
+    password: admin
+    virtual-host: /
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:32000/eureka/

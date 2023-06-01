@@ -1,0 +1,13 @@
+server:
+  port: 32000
+spring:
+  application:
+    name: eurekaApplication
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false # 不将自己注册到注册中心
+    fetch-registry: false # 不从注册中心获取数据
